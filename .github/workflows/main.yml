@@ -14,7 +14,7 @@ jobs:
       # Optional: Add steps here for building your app (composer install, npm run, etc.)
 
       - name: Deploy via FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_HOST }}        # e.g. "srv-plesk123.ps.kz" or your domain
           username: ${{ secrets.FTP_USERNAME }}
