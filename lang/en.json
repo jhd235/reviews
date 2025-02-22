@@ -1,0 +1,9 @@
+// filepath: /lang/en.json
+{
+    "search": "Search",
+    "submit_review": "Submit Review",
+    "rating": "Rating",
+    "write_a_review": "Write a Review",
+    "search_results": "Search Results",
+    "success_message": "Review submitted successfully!"
+}

@@ -50,4 +50,27 @@ document.addEventListener('DOMContentLoaded', function() {
             ratingStars.forEach(star => star.classList.remove('selected'));
         });
     });
+
+    let currentLanguage = 'en';
+
+    function loadLanguage(lang) {
+        fetch(`/lang/${lang}.json`)
+            .then(response => response.json())
+            .then(translations => {
+                document.querySelector('#search-button').textContent = translations.search;
+                document.querySelector('#submit-review-button').textContent = translations.submit_review;
+                document.querySelector('#rating-label').textContent = translations.rating;
+                document.querySelector('#write-review-label').textContent = translations.write_a_review;
+                document.querySelector('#search-results-label').textContent = translations.search_results;
+                // Update other elements as needed
+            });
+    }
+
+    document.querySelector('#language-selector').addEventListener('change', function(event) {
+        currentLanguage = event.target.value;
+        loadLanguage(currentLanguage);
+    });
+
+    // Load default language on page load
+    loadLanguage(currentLanguage);
 });

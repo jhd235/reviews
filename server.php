@@ -1,5 +1,7 @@
 <?php
 $action = $_GET['action'] ?? null;
+$lang = $_GET['lang'] ?? 'en';
+$translations = json_decode(file_get_contents("lang/$lang.json"), true);
 
 try {
     $db = new PDO('sqlite:database.sqlite');

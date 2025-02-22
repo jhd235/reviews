@@ -9,15 +9,21 @@
 <body>
     <header>
         <h1>Review and Rating Application</h1>
+        <select id="language-selector">
+            <option value="en">English</option>
+            <option value="es">Español</option>
+            <!-- Add more languages as needed -->
+        </select>
     </header>
     <main>
         <section id="search">
             <h2>Search Reviews</h2>
             <form id="search-form">
                 <input type="text" id="search-input" placeholder="Search for reviews...">
-                <button type="submit">Search</button>
+                <button type="submit" id="search-button">Search</button>
             </form>
             <div id="search-results"></div>
+            <div id="search-results-label">Search Results</div>
         </section>
         <section id="write-review">
             <h2>Write a Review</h2>
@@ -30,8 +36,10 @@
                     <span class="star" data-value="4">&#9733;</span>
                     <span class="star" data-value="5">&#9733;</span>
                 </div>
-                <button type="submit">Submit Review</button>
+                <label id="rating-label">Rating</label>
+                <button type="submit" id="submit-review-button">Submit Review</button>
             </form>
+            <label id="write-review-label">Write a Review</label>
         </section>
     </main>
     <footer>
