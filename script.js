@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    let currentLanguage = 'en';
+    let currentLanguage = 'es';
 
     function loadLanguage(lang) {
         fetch(`/lang/${lang}.json`)
